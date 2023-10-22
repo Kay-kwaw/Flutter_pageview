@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:pageview/cart.dart';
 import 'package:pageview/home.dart';
 
 class HomescreenWidget extends StatefulWidget {
@@ -347,15 +348,22 @@ class _HomescreenWidgetState extends State<HomescreenWidget> with SingleTickerPr
                                           ),
                                         ],
                                       ),
-                                      const Padding(
+                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0, 0, 0, 20),
-                                        child: Text(
-                                          'Lucky Jade Plant',
-                                          style:TextStyle(
-                                                fontFamily: 'Readex Pro',
-                                                fontSize: 12,
-                                              ),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => const HomePageCopyWidget(),
+    ));
+                                          },
+                                          child: Text(
+                                            'Lucky Jade Plant',
+                                            style:TextStyle(
+                                                  fontFamily: 'Readex Pro',
+                                                  fontSize: 12,
+                                                ),
+                                          ),
                                         ),
                                       ),
                                       Row(

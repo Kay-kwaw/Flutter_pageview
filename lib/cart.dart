@@ -234,7 +234,7 @@ class _HomePageCopyWidgetState extends State<HomePageCopyWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(16, 0, 0, 16),
                           child: SmoothPageIndicator(
                                       count: 3,
-                                      axisDirection: Axis.horizontal,
+                                      axisDirection: Axis.vertical,
                                       onDotClicked: (i) async {
                                         await controller.animateToPage(
                                           i,
