@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pageview/home_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -149,12 +150,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         fontSize: 30,
                         fontWeight: FontWeight.w500,
                       ),
+                      
                 ),
               ),
                IconButton(
                 icon: const Icon(Icons.arrow_circle_right),
                 color: const Color(0xFF1A5924),
-                iconSize: 80, onPressed: () {  },
+                iconSize: 80, onPressed: () { 
+                  Navigator.push(
+    context, MaterialPageRoute(builder: (context) => const HomescreenWidget()));
+                 },
               ),
             ],
           ),
